@@ -1,37 +1,15 @@
-# Flappy Learning ([Demo](http://xviniette.github.io/FlappyLearning/))
+# Flappy Learning
 
-Program that learns to play Flappy Bird by machine learning ([Neuroevolution](http://www.scholarpedia.org/article/Neuroevolution))
+Program that learns to play Flappy Bird by machine learning. [Demo](http://xviniette.github.io/FlappyLearning/)
 
-![alt tag](https://github.com/xviniette/FlappyLearning/blob/gh-pages/img/flappy.png?raw=true)
+**Train**
 
-### [NeuroEvolution.js](http://github.com/xviniette/FlappyLearning/blob/gh-pages/Neuroevolution.js) : Utilization
+![](./screenshots/1.gif)
 
-```javascript
-// Initialize
-let ne = new Neuroevolution({options});
+**Result**
 
-//Default options values
-let options = {
-    network:[1, [1], 1],    // Perceptron structure
-    population:50,          // Population by generation
-    elitism:0.2,            // Best networks kepts unchanged for the next generation (rate)
-    randomBehaviour:0.2,    // New random networks for the next generation (rate)
-    mutationRate:0.1,       // Mutation rate on the weights of synapses
-    mutationRange:0.5,      // Interval of the mutation changes on the synapse weight
-    historic:0,             // Latest generations saved
-    lowHistoric:false,      // Only save score (not the network)
-    scoreSort:-1,           // Sort order (-1 = desc, 1 = asc)
-    nbChild:1               // number of child by breeding
-}
+![](./screenshots/2.gif)
 
-//Update options at any time
-ne.set({options});
+## Acknowledgement
 
-// Generate first or next generation
-let generation = ne.nextGeneration();
-
-//When an network is over -> save this score
-ne.networkScore(generation[x], <score = 0>);
-```
-
-You can see the NeuroEvolution integration in Flappy Bird in [Game.js](http://github.com/xviniette/FlappyLearning/blob/gh-pages/game.js).
+Flappy Learning: http://xviniette.github.io/FlappyLearning
