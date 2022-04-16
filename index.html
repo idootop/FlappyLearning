@@ -1,19 +1,50 @@
 <!DOCTYPE html>
-<html>
+
 <head>
-	<title>NeuroEvolution : Flappy Bird</title>
-	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<title>Flappy Bird</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.row {
+			margin: 5vw;
+			display: flex;
+			flex-flow: row;
+			justify-content: space-between;
+		}
+
+		button {
+			height: 32px;
+			min-width: 88px;
+			padding: 0 16px;
+			background-color: #00a4ff;
+			border: 1px solid transparent;
+			color: #fff;
+			font-size: 14px;
+			line-height: 30px;
+			text-align: center;
+			display: inline-block;
+			cursor: pointer;
+			outline: 0;
+			box-sizing: border-box;
+			border-radius: 0;
+		}
+	</style>
 </head>
+
 <body>
-	<canvas id="flappy" width="500" height="512"></canvas> <br/>
-	<button onclick="speed(60)">x1</button> 
-	<button onclick="speed(120)">x2</button> 
-	<button onclick="speed(180)">x3</button> 
-	<button onclick="speed(300)">x5</button> 
-	<button onclick="speed(0)">MAX</button> 
-	<br/>
-	<a href="http://github.com/xviniette/FlappyLearning">GitHub Repository</a>
-	<script src = "Neuroevolution.js"></script>
-	<script src = "game.js"></script>
+	<canvas id="flappy" width="500" height="512"></canvas> <br />
+	<div class="row">
+		<button onclick="speed(60)">x1</button>
+		<button onclick="speed(120)">x2</button>
+		<button onclick="speed(180)">x3</button>
+		<button onclick="speed(300)">x5</button>
+		<button onclick="speed(0)">MAX</button>
+	</div>
+	<script src="Neuroevolution.js"></script>
+	<script src="game.js"></script>
 </body>
+
 </html>
